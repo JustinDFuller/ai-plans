@@ -45,33 +45,6 @@ Document your approach, track progress, and note any challenges faced during imp
 
 @/plans/README.md`
 
-  // Legacy .cursorrules format (still supported but deprecated)
-  const legacyCursorRules = `# AI Plans Documentation
-
-When working on features or fixes in this project, create an AI Plan document in the /plans/ directory.
-
-## File Format
-- Location: /plans/
-- Naming: YYYY-MM-DD-HH-mm-description.md
-- Include sections: Summary, Original Request, AI's Plan, AI's TODOs, Major Issues Encountered
-
-## TODO Tracking
-- Use ✅ for completed tasks
-- Use ⏳ for pending tasks
-- Update status as you progress through implementation
-
-## Purpose
-AI Plans create a searchable history of:
-- Implementation decisions
-- Problem-solving approaches
-- Issues encountered and their resolutions
-- Context for future development
-
-## Example
-When asked to "Add user authentication", create:
-/plans/2025-01-20-14-30-add-user-auth.md
-
-Document your approach, track progress, and note any challenges faced during implementation.`
 
   return (
     <div className="pt-24 min-h-screen">
