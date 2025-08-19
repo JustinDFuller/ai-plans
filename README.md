@@ -6,6 +6,12 @@ A modern documentation website explaining the AI Plans concept - a structured ap
 
 Visit [ai-plans.vercel.app](https://ai-plans.vercel.app) (deploy via Vercel)
 
+## Example
+
+<div align="center">
+<img width="auto" height="1500" alt="screely-1755570588911" src="https://github.com/user-attachments/assets/05bfee2a-b451-4043-a5c9-38a8ff2aab1a" />
+</div>
+
 ## 📖 What are AI Plans?
 
 AI Plans are markdown documents that capture the complete context of AI-assisted development tasks. Similar to Architecture Decision Records (ADRs), but specifically designed for AI tool interactions, they provide:
