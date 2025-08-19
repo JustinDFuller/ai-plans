@@ -1,69 +1,108 @@
-# React + TypeScript + Vite
+# AI Plans
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern documentation website explaining the AI Plans concept - a structured approach to tracking AI-assisted development decisions and processes.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit [ai-plans.vercel.app](https://ai-plans.vercel.app) (deploy via Vercel)
 
-## Expanding the ESLint configuration
+## 📖 What are AI Plans?
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+AI Plans are markdown documents that capture the complete context of AI-assisted development tasks. Similar to Architecture Decision Records (ADRs), but specifically designed for AI tool interactions, they provide:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Original developer requests
+- AI's proposed implementation plans
+- Task breakdowns and TODOs
+- Issues encountered and resolutions
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+All stored in your repository's `/plans/` directory for future reference.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+- **React 18** with TypeScript
+- **Vite** for blazing fast builds
+- **Tailwind CSS** for styling
+- **Vercel** for deployment
+
+## 🏃 Getting Started
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/JustinDFuller/ai-plans.git
+cd ai-plans
+
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Start development server
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+## 📁 Project Structure
+
+```
+ai-plans/
+├── src/
+│   ├── App.tsx         # Main application component
+│   ├── index.css       # Tailwind CSS directives
+│   └── main.tsx        # Application entry point
+├── plans/              # AI Plans documentation
+│   └── *.md            # Individual AI Plan documents
+├── public/             # Static assets
+└── vercel.json         # Vercel configuration
+```
+
+## 🎨 Design
+
+The website features a Remix.run-inspired dark theme with:
+- Vibrant cyan, blue, and purple gradients
+- Bold typography and modern layout
+- Smooth animations and transitions
+- Responsive design for all devices
+
+## 📝 Creating AI Plans
+
+When using AI tools for development, create a plan document:
+
+```markdown
+/plans/YYYY-MM-DD-HH-mm-description.md
+```
+
+Include these sections:
+1. **Summary** - Concise description of the change
+2. **Original Request** - The user's initial request
+3. **AI's Plan** - Implementation strategy
+4. **AI's TODOs** - Task breakdown with status
+5. **Major Issues** - Problems and solutions
+
+## 🤝 Contributing
+
+1. Create an AI Plan for your feature/fix
+2. Implement the changes
+3. Update the AI Plan with issues encountered
+4. Submit a PR with both code and plan
+
+## 📄 License
+
+MIT License - feel free to use this pattern in your projects!
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/JustinDFuller/ai-plans)
+- [AI Plans Concept](https://ai-plans.vercel.app)
+
+---
+
+Built with AI assistance and documented in [its own AI Plan](/plans/2025-01-19-ai-plans-website.md) 🤖
