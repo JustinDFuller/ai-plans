@@ -46,19 +46,20 @@ When asked to implement a feature, first create a plan documenting:
 This creates valuable documentation for the team.`
 
   const vscodeSettings = `{
+  // Enable custom instructions for code generation
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  
+  // Enable Copilot for all file types
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
     "markdown": true
   },
-  "github.copilot.workspace.promptForInstructions": true,
-  "github.copilot.projectContext": {
-    "instructions": [
-      "Create AI Plans in /plans/ for all feature implementations",
-      "Use format: YYYY-MM-DD-HH-mm-description.md",
-      "Track TODOs with ✅ (done) and ⏳ (pending)",
-      "Document issues encountered and solutions"
-    ]
+  
+  // Optional: Configure advanced features (2025)
+  "github.copilot.advanced": {
+    "agentMode": "enabled",
+    "nextEditSuggestions": true
   }
 }`
 
@@ -133,11 +134,17 @@ This creates valuable documentation for the team.`
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-3">Add workspace instructions</h3>
                 <p className="text-gray-400 mb-3">
-                  Create <code className="text-green-400">.github/copilot-instructions.md</code> in your project:
+                  Create <code className="text-green-400">.github/copilot-instructions.md</code> in your project root:
                 </p>
+                <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800 mb-3">
+                  <code className="text-green-400 font-mono">
+                    mkdir -p .github<br />
+                    touch .github/copilot-instructions.md
+                  </code>
+                </div>
                 <div className="bg-remix-gray-900 rounded-lg border border-remix-gray-800 relative">
                   <div className="flex items-center justify-between px-4 py-3 border-b border-remix-gray-800">
-                    <span className="text-sm text-gray-500 font-mono">copilot-instructions.md</span>
+                    <span className="text-sm text-gray-500 font-mono">.github/copilot-instructions.md</span>
                     <button
                       onClick={() => copyToClipboard(copilotInstructions, 'copilot-instructions')}
                       className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
@@ -251,6 +258,92 @@ This creates valuable documentation for the team.`
         </div>
       </section>
 
+      {/* 2025 Agent Mode Features */}
+      <section className="px-6 py-16 bg-remix-gray-900/30">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black mb-12">
+            New in 2025: <span className="text-green-400">Agent Mode</span>
+          </h2>
+          
+          <div className="bg-gradient-to-br from-green-600/10 to-transparent rounded-xl p-8 border border-remix-gray-800">
+            <h3 className="text-2xl font-bold mb-4 text-emerald-400">Copilot Agent for End-to-End Tasks</h3>
+            <p className="text-gray-300 mb-6">
+              Agent mode (available in VS Code Insiders and gradually rolling out to Stable) can automatically:
+            </p>
+            <ul className="space-y-3 text-gray-400">
+              <li className="flex items-start gap-3">
+                <span className="text-green-400 mt-1">✓</span>
+                <span>Search your workspace for relevant context automatically</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-400 mt-1">✓</span>
+                <span>Edit multiple files to complete complex tasks</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-400 mt-1">✓</span>
+                <span>Check edited files for errors and fix them</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-400 mt-1">✓</span>
+                <span>Run terminal commands (with your permission)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-400 mt-1">✓</span>
+                <span>Create comprehensive AI Plans documenting all changes</span>
+              </li>
+            </ul>
+            <div className="mt-6 p-4 bg-remix-gray-900 rounded-lg border border-remix-gray-800">
+              <p className="text-sm text-gray-500">
+                <strong>Enable Agent Mode:</strong> Available in VS Code Insiders, gradually rolling out to Stable (Feb 2025)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Prompt Files */}
+      <section className="px-6 py-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black mb-12">
+            Organize with <span className="text-emerald-400">Prompt Files</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
+              <h3 className="text-2xl font-bold mb-4 text-green-400">Workspace Prompts</h3>
+              <p className="text-gray-400 mb-4">
+                Store reusable prompts in <code className="text-emerald-400">.github/prompts/</code>:
+              </p>
+              <div className="bg-remix-dark rounded-lg p-4 border border-remix-gray-800">
+                <code className="text-gray-300 font-mono text-sm">
+                  .github/<br />
+                  ├── copilot-instructions.md<br />
+                  └── prompts/<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;├── create-plan.md<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;├── update-todos.md<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;└── document-issues.md
+                </code>
+              </div>
+            </div>
+
+            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
+              <h3 className="text-2xl font-bold mb-4 text-emerald-400">User Prompts</h3>
+              <p className="text-gray-400 mb-4">
+                Personal prompts available across all workspaces:
+              </p>
+              <div className="bg-remix-dark rounded-lg p-4 border border-remix-gray-800">
+                <code className="text-gray-300 font-mono text-sm">
+                  # Stored in VS Code profile<br />
+                  # Access via Copilot Chat<br />
+                  # Share across projects<br />
+                  # Sync with settings
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Copilot Features */}
       <section className="px-6 py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
@@ -260,10 +353,10 @@ This creates valuable documentation for the team.`
           
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-green-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-green-500/50 transition-all">
-              <div className="text-3xl mb-4">💬</div>
-              <h3 className="text-xl font-bold mb-2">Chat Integration</h3>
+              <div className="text-3xl mb-4">📋</div>
+              <h3 className="text-xl font-bold mb-2">Agent-Generated Plans</h3>
               <p className="text-gray-400">
-                Copilot Chat can reference and update plans using @workspace context
+                Agent mode can create and update AI Plans while implementing features end-to-end
               </p>
             </div>
             
@@ -271,15 +364,15 @@ This creates valuable documentation for the team.`
               <div className="text-3xl mb-4">🔄</div>
               <h3 className="text-xl font-bold mb-2">Pattern Learning</h3>
               <p className="text-gray-400">
-                Copilot learns from your existing plans to suggest consistent formats
+                Copilot learns from your existing AI Plans to suggest consistent formats
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-teal-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-teal-500/50 transition-all">
-              <div className="text-3xl mb-4">📝</div>
-              <h3 className="text-xl font-bold mb-2">Inline Suggestions</h3>
+              <div className="text-3xl mb-4">✅</div>
+              <h3 className="text-xl font-bold mb-2">TODO Tracking</h3>
               <p className="text-gray-400">
-                Get contextual suggestions while writing plans based on project history
+                Inline suggestions help update AI Plan TODOs as you complete tasks
               </p>
             </div>
           </div>
@@ -370,10 +463,10 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Use @workspace Context</h3>
+                <h3 className="font-bold text-lg mb-2">Use Agent Mode for Plans</h3>
                 <p className="text-gray-400">
-                  In Copilot Chat, use <code className="text-green-400">@workspace</code> to 
-                  reference existing plans and maintain consistency
+                  Let Agent mode create comprehensive AI Plans by asking it to "Document this 
+                  implementation in /plans/" after completing multi-file changes
                 </p>
               </div>
             </div>
@@ -381,10 +474,10 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Create Snippets</h3>
+                <h3 className="font-bold text-lg mb-2">Create Plan Prompts</h3>
                 <p className="text-gray-400">
-                  Set up VS Code snippets for common plan sections to speed up 
-                  documentation with Copilot's help
+                  Store AI Plan templates in <code className="text-green-400">.github/prompts/create-plan.md</code> 
+                  for consistent plan generation with "@workspace /create-plan"
                 </p>
               </div>
             </div>
@@ -392,10 +485,10 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Reference in PRs</h3>
+                <h3 className="font-bold text-lg mb-2">Reference Plans in Chat</h3>
                 <p className="text-gray-400">
-                  Link to relevant AI Plans in pull requests for context. 
-                  Copilot can help generate PR descriptions from plans
+                  Use <code className="text-green-400">@workspace #file:/plans/</code> to have Copilot 
+                  review existing plans before suggesting new implementations
                 </p>
               </div>
             </div>
@@ -403,10 +496,10 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Voice with Copilot</h3>
+                <h3 className="font-bold text-lg mb-2">Inline Plan Updates</h3>
                 <p className="text-gray-400">
-                  Use VS Code's voice features with Copilot to dictate plans 
-                  while thinking through implementations
+                  While coding, Copilot will suggest TODO updates in your AI Plans when it 
+                  detects you're completing tasks mentioned in the plan
                 </p>
               </div>
             </div>
