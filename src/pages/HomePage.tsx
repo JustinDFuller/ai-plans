@@ -127,6 +127,166 @@ const HomePage: FC = () => {
         </div>
       </section>
 
+      {/* When to Use AI Plans */}
+      <section id="when-to-use" className="px-4 sm:px-6 py-16 sm:py-24 md:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-600/5 to-transparent"></div>
+        <div className="relative max-w-7xl mx-auto">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 sm:mb-12 tracking-tight">
+              When to Use <span className="text-purple-400">AI Plans</span>
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Create AI Plans For */}
+              <div className="bg-gradient-to-br from-green-600/10 to-remix-gray-900/50 rounded-2xl p-6 sm:p-8 border border-green-500/30">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-400 flex items-center gap-3">
+                  <span className="text-3xl">✅</span> Create AI Plans For:
+                </h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Substantive feature additions or modifications</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Complex bug fixes requiring investigation</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Architectural changes or refactoring</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Integration of new dependencies or tools</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Multi-step implementations requiring planning</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Skip AI Plans For */}
+              <div className="bg-gradient-to-br from-red-600/10 to-remix-gray-900/50 rounded-2xl p-6 sm:p-8 border border-red-500/30">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-red-400 flex items-center gap-3">
+                  <span className="text-3xl">⏭️</span> Skip AI Plans For:
+                </h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Simple typo fixes</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Minor style adjustments</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Straightforward documentation updates</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Single-line bug fixes</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Dependency version bumps without code changes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
+              <p className="text-lg text-gray-300 leading-relaxed">
+                <span className="text-remix-yellow font-bold">Key Principle:</span> AI Plans should
+                document substantive changes where the AI's reasoning, approach, and problem-solving
+                process add value beyond what's captured in commit messages and PR descriptions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Unique Value Section */}
+      <section id="unique-value" className="px-4 sm:px-6 py-16 sm:py-24 md:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-remix-blue/5 to-transparent"></div>
+        <div className="relative max-w-7xl mx-auto">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 sm:mb-12 tracking-tight">
+              Beyond <span className="text-remix-blue">PRs & Commits</span>
+            </h2>
+            <p className="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-12">
+              AI Plans provide unique value that traditional documentation doesn't capture:
+            </p>
+
+            <div className="space-y-6">
+              <div className="group flex items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-gradient-to-br from-remix-gray-900/50 to-remix-gray-900/30 rounded-xl border border-remix-gray-800 hover:border-remix-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-remix-blue/10">
+                <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  🤖
+                </div>
+                <div>
+                  <div className="font-bold text-lg sm:text-xl mb-2 text-white">
+                    Real-time AI Context
+                  </div>
+                  <div className="text-sm sm:text-base text-gray-400">
+                    Plans are immediately accessible to AI tools during implementation, just like
+                    source code files. This enables AI to understand past decisions and patterns
+                    without searching through git history.
+                  </div>
+                </div>
+              </div>
+
+              <div className="group flex items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-gradient-to-br from-remix-gray-900/50 to-remix-gray-900/30 rounded-xl border border-remix-gray-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  🔄
+                </div>
+                <div>
+                  <div className="font-bold text-lg sm:text-xl mb-2 text-white">
+                    Implementation Journey
+                  </div>
+                  <div className="text-sm sm:text-base text-gray-400">
+                    Capture attempted approaches, pivots, and dead ends—valuable learning that never
+                    makes it into commits. Show the "how we got here" that helps future developers
+                    understand trade-offs.
+                  </div>
+                </div>
+              </div>
+
+              <div className="group flex items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-gradient-to-br from-remix-gray-900/50 to-remix-gray-900/30 rounded-xl border border-remix-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+                <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  📊
+                </div>
+                <div>
+                  <div className="font-bold text-lg sm:text-xl mb-2 text-white">
+                    Living Progress Tracking
+                  </div>
+                  <div className="text-sm sm:text-base text-gray-400">
+                    TODOs with real-time status updates show exactly what was completed vs.
+                    deferred. This granular tracking doesn't fit in commit messages but is
+                    invaluable for understanding scope.
+                  </div>
+                </div>
+              </div>
+
+              <div className="group flex items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-gradient-to-br from-remix-gray-900/50 to-remix-gray-900/30 rounded-xl border border-remix-gray-800 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
+                <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  🎓
+                </div>
+                <div>
+                  <div className="font-bold text-lg sm:text-xl mb-2 text-white">
+                    AI Learning Repository
+                  </div>
+                  <div className="text-sm sm:text-base text-gray-400">
+                    Build a searchable knowledge base of how your team uses AI effectively. Each
+                    plan becomes a learning example that improves future AI interactions.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="px-4 sm:px-6 py-16 sm:py-24 md:py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-remix-blue/5 via-transparent to-purple-600/5"></div>

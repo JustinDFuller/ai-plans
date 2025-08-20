@@ -17,10 +17,20 @@ const GitHubCopilotPage: FC = () => {
 This project uses AI Plans to document AI-assisted development decisions.
 
 ## When to Create AI Plans
-- Before implementing new features
-- When refactoring existing code
-- When solving complex problems
-- After debugging sessions
+
+### Create AI Plans for:
+- Substantive feature additions or modifications
+- Complex bug fixes requiring investigation
+- Architectural changes or refactoring
+- Integration of new dependencies or tools
+- Any change requiring multiple steps or significant planning
+
+### DO NOT create AI Plans for:
+- Simple typo fixes
+- Minor style adjustments
+- Straightforward documentation updates
+- Single-line bug fixes
+- Dependency version bumps without code changes
 
 ## File Format
 Create markdown files in /plans/ with this structure:

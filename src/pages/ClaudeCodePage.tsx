@@ -14,7 +14,26 @@ const ClaudeCodePage: FC = () => {
 
   const claudeMdSnippet = `## AI Plans Convention
 
-When making changes to this project, create an AI Plan in \`/plans/\` following the naming convention:
+### When to Create AI Plans
+
+**Create an AI Plan for:**
+- Substantive feature additions or modifications
+- Complex bug fixes requiring investigation
+- Architectural changes or refactoring
+- Integration of new dependencies or tools
+- Any change requiring multiple steps or significant planning
+
+**DO NOT create an AI Plan for:**
+- Simple typo fixes
+- Minor style adjustments
+- Straightforward documentation updates
+- Single-line bug fixes
+- Dependency version bumps without code changes
+
+### Plan Format
+
+When creating an AI Plan, use the following naming convention in \`/plans/\`:
+
 \`\`\`
 /plans/YYYY-MM-DD-description.md
 \`\`\`

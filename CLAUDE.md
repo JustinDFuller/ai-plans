@@ -67,10 +67,40 @@ npm run lint         # Run ESLint
 
 ## AI Plans Convention
 
-When making changes to this project, create an AI Plan in `/plans/` following the naming convention:
+### When to Create AI Plans
+
+**Create an AI Plan for:**
+
+- Substantive feature additions or modifications
+- Complex bug fixes requiring investigation
+- Architectural changes or refactoring
+- Integration of new dependencies or tools
+- Any change requiring multiple steps or significant planning
+
+**DO NOT create an AI Plan for:**
+
+- Simple typo fixes
+- Minor style adjustments
+- Straightforward documentation updates
+- Single-line bug fixes
+- Dependency version bumps without code changes
+
+### Plan Format
+
+When creating an AI Plan, use the following naming convention in `/plans/`:
 
 ```
 /plans/YYYY-MM-DD-description.md
 ```
 
 Include: Summary, Original Request, AI's Plan, AI's TODOs, and Major Issues Encountered.
+
+### Why AI Plans Add Value
+
+AI Plans provide unique benefits beyond PR descriptions and commit messages:
+
+1. **Real-time AI Context**: Plans are immediately accessible to AI tools during implementation, just like source code files
+2. **Implementation Details**: Capture the "how" and "why" of AI-assisted development, including attempted approaches and pivots
+3. **Learning History**: Document what worked and what didn't for future AI sessions
+4. **Searchable Decisions**: Create a queryable history of development reasoning and trade-offs
+5. **Process Transparency**: Show stakeholders exactly how AI assistance was used in development

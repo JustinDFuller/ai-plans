@@ -22,6 +22,22 @@ alwaysApply: true
 
 When working on features or fixes in this project, create an AI Plan document in the /plans/ directory.
 
+## When to Create AI Plans
+
+### Create AI Plans for:
+- Substantive feature additions or modifications
+- Complex bug fixes requiring investigation
+- Architectural changes or refactoring
+- Integration of new dependencies or tools
+- Any change requiring multiple steps or significant planning
+
+### DO NOT create AI Plans for:
+- Simple typo fixes
+- Minor style adjustments
+- Straightforward documentation updates
+- Single-line bug fixes
+- Dependency version bumps without code changes
+
 ## File Format
 - Location: /plans/
 - Naming: YYYY-MM-DD-description.md
