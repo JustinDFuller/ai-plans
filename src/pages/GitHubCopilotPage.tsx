@@ -47,7 +47,8 @@ This creates valuable documentation for the team.`
 
   const vscodeSettings = `{
   // Enable custom instructions for code generation
-  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.codeGeneration
+    .useInstructionFiles": true,
   
   // Enable Copilot for all file types
   "github.copilot.enable": {
@@ -78,22 +79,22 @@ This creates valuable documentation for the team.`
 "Add the current issue and solution to the AI Plan"`
 
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       {/* Hero Section */}
-      <section className="relative px-6 py-20 overflow-hidden">
+      <section className="relative px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 animate-gradient bg-[length:200%_200%]"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter leading-none">
               AI Plans for{' '}
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                 GitHub Copilot
               </span>
             </h1>
-            <p className="mt-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
               Configure GitHub Copilot in VS Code to automatically document your 
               AI-assisted development with structured markdown plans.
             </p>
@@ -102,9 +103,9 @@ This creates valuable documentation for the team.`
       </section>
 
       {/* Quick Setup */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Quick <span className="text-green-400">Setup</span>
           </h2>
           
@@ -112,13 +113,13 @@ This creates valuable documentation for the team.`
             {/* Step 1 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   1
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Create the plans directory</h3>
-                <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Create the plans directory</h3>
+                <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
                   <code className="text-green-400 font-mono">mkdir plans</code>
                 </div>
               </div>
@@ -127,16 +128,16 @@ This creates valuable documentation for the team.`
             {/* Step 2 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   2
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Add workspace instructions</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Add workspace instructions</h3>
                 <p className="text-gray-400 mb-3">
                   Create <code className="text-green-400">.github/copilot-instructions.md</code> in your project root:
                 </p>
-                <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800 mb-3">
+                <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800 mb-3">
                   <code className="text-green-400 font-mono">
                     mkdir -p .github<br />
                     touch .github/copilot-instructions.md
@@ -152,8 +153,8 @@ This creates valuable documentation for the team.`
                       {copiedSection === 'copilot-instructions' ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <pre className="p-4 overflow-x-auto">
-                    <code className="text-gray-300 font-mono text-sm">{copilotInstructions}</code>
+                  <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{copilotInstructions}</code>
                   </pre>
                 </div>
               </div>
@@ -162,12 +163,12 @@ This creates valuable documentation for the team.`
             {/* Step 3 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   3
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Configure VS Code settings</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Configure VS Code settings</h3>
                 <p className="text-gray-400 mb-3">
                   Add to your workspace <code className="text-green-400">.vscode/settings.json</code>:
                 </p>
@@ -181,8 +182,8 @@ This creates valuable documentation for the team.`
                       {copiedSection === 'vscode-settings' ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <pre className="p-4 overflow-x-auto">
-                    <code className="text-gray-300 font-mono text-sm">{vscodeSettings}</code>
+                  <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{vscodeSettings}</code>
                   </pre>
                 </div>
               </div>
@@ -192,16 +193,16 @@ This creates valuable documentation for the team.`
       </section>
 
       {/* How to Use */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             How to <span className="text-emerald-400">Use</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-green-400">With Copilot Chat</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-green-400">With Copilot Chat</h3>
+              <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                 Use Copilot Chat to create and manage plans:
               </p>
               <div className="bg-remix-dark rounded-lg p-4 border border-remix-gray-800">
@@ -214,9 +215,9 @@ This creates valuable documentation for the team.`
               </p>
             </div>
 
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">With Inline Suggestions</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-emerald-400">With Inline Suggestions</h3>
+              <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                 Start typing in a new plan file:
               </p>
               <div className="bg-remix-dark rounded-lg p-4 border border-remix-gray-800">
@@ -235,9 +236,9 @@ This creates valuable documentation for the team.`
       </section>
 
       {/* Chat Prompts */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Copilot Chat <span className="text-green-400">Prompts</span>
           </h2>
           
@@ -251,22 +252,22 @@ This creates valuable documentation for the team.`
                 {copiedSection === 'chat-prompts' ? 'Copied!' : 'Copy'}
               </button>
             </div>
-            <pre className="p-4 overflow-x-auto">
-              <code className="text-gray-300 font-mono text-sm">{chatPrompts}</code>
+            <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+              <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{chatPrompts}</code>
             </pre>
           </div>
         </div>
       </section>
 
       {/* 2025 Agent Mode Features */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             New in 2025: <span className="text-green-400">Agent Mode</span>
           </h2>
           
-          <div className="bg-gradient-to-br from-green-600/10 to-transparent rounded-xl p-8 border border-remix-gray-800">
-            <h3 className="text-2xl font-bold mb-4 text-emerald-400">Copilot Agent for End-to-End Tasks</h3>
+          <div className="bg-gradient-to-br from-green-600/10 to-transparent rounded-xl p-4 sm:p-6 md:p-8 border border-remix-gray-800">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-emerald-400">Copilot Agent for End-to-End Tasks</h3>
             <p className="text-gray-300 mb-6">
               Agent mode (available in VS Code Insiders and gradually rolling out to Stable) can automatically:
             </p>
@@ -302,16 +303,16 @@ This creates valuable documentation for the team.`
       </section>
 
       {/* Prompt Files */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Organize with <span className="text-emerald-400">Prompt Files</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-green-400">Workspace Prompts</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-green-400">Workspace Prompts</h3>
+              <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                 Store reusable prompts in <code className="text-emerald-400">.github/prompts/</code>:
               </p>
               <div className="bg-remix-dark rounded-lg p-4 border border-remix-gray-800">
@@ -326,9 +327,9 @@ This creates valuable documentation for the team.`
               </div>
             </div>
 
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">User Prompts</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-emerald-400">User Prompts</h3>
+              <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                 Personal prompts available across all workspaces:
               </p>
               <div className="bg-remix-dark rounded-lg p-4 border border-remix-gray-800">
@@ -345,33 +346,33 @@ This creates valuable documentation for the team.`
       </section>
 
       {/* Copilot Features */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Why AI Plans Work Great with <span className="text-green-400">GitHub Copilot</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-green-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-green-500/50 transition-all">
-              <div className="text-3xl mb-4">📋</div>
-              <h3 className="text-xl font-bold mb-2">Agent-Generated Plans</h3>
-              <p className="text-gray-400">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-gradient-to-br from-green-600/10 to-transparent rounded-xl p-4 sm:p-6 border border-remix-gray-800 hover:border-green-500/50 transition-all">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📋</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Agent-Generated Plans</h3>
+              <p className="text-sm sm:text-base text-gray-400">
                 Agent mode can create and update AI Plans while implementing features end-to-end
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-emerald-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-emerald-500/50 transition-all">
               <div className="text-3xl mb-4">🔄</div>
-              <h3 className="text-xl font-bold mb-2">Pattern Learning</h3>
-              <p className="text-gray-400">
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Pattern Learning</h3>
+              <p className="text-sm sm:text-base text-gray-400">
                 Copilot learns from your existing AI Plans to suggest consistent formats
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-teal-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-teal-500/50 transition-all">
               <div className="text-3xl mb-4">✅</div>
-              <h3 className="text-xl font-bold mb-2">TODO Tracking</h3>
-              <p className="text-gray-400">
+              <h3 className="text-lg sm:text-xl font-bold mb-2">TODO Tracking</h3>
+              <p className="text-sm sm:text-base text-gray-400">
                 Inline suggestions help update AI Plan TODOs as you complete tasks
               </p>
             </div>
@@ -380,9 +381,9 @@ This creates valuable documentation for the team.`
       </section>
 
       {/* Example Plan */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Example <span className="text-emerald-400">Copilot Plan</span>
           </h2>
           
@@ -397,8 +398,8 @@ This creates valuable documentation for the team.`
                 <span className="text-sm text-gray-500 font-mono">2025-01-20-09-15-notification-system.md</span>
               </div>
             </div>
-            <pre className="p-6 overflow-x-auto">
-              <code className="text-gray-300 font-mono text-sm leading-relaxed">{`# Implement Notification System
+            <pre className="p-4 sm:p-6 overflow-x-auto max-w-full">
+              <code className="text-gray-300 font-mono text-xs sm:text-sm leading-relaxed whitespace-pre-wrap break-words">{`# Implement Notification System
 
 ## Summary
 Add real-time notifications with email, in-app, and push notification support.
@@ -453,9 +454,9 @@ Suggested by Copilot Chat based on workspace analysis:
       </section>
 
       {/* Tips */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Pro <span className="text-green-400">Tips</span>
           </h2>
           
@@ -463,8 +464,8 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Use Agent Mode for Plans</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Use Agent Mode for Plans</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Let Agent mode create comprehensive AI Plans by asking it to "Document this 
                   implementation in /plans/" after completing multi-file changes
                 </p>
@@ -474,8 +475,8 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Create Plan Prompts</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Create Plan Prompts</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Store AI Plan templates in <code className="text-green-400">.github/prompts/create-plan.md</code> 
                   for consistent plan generation with "@workspace /create-plan"
                 </p>
@@ -485,8 +486,8 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Reference Plans in Chat</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Reference Plans in Chat</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Use <code className="text-green-400">@workspace #file:/plans/</code> to have Copilot 
                   review existing plans before suggesting new implementations
                 </p>
@@ -496,8 +497,8 @@ Suggested by Copilot Chat based on workspace analysis:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Inline Plan Updates</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Inline Plan Updates</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   While coding, Copilot will suggest TODO updates in your AI Plans when it 
                   detects you're completing tasks mentioned in the plan
                 </p>

@@ -38,22 +38,22 @@ The plan should capture:
 This creates a searchable history of AI-assisted development decisions.`
 
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       {/* Hero Section */}
-      <section className="relative px-6 py-20 overflow-hidden">
+      <section className="relative px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-remix-blue via-cyan-600 to-blue-600 animate-gradient bg-[length:200%_200%]"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter leading-none">
               AI Plans for{' '}
               <span className="bg-gradient-to-r from-remix-blue to-cyan-400 bg-clip-text text-transparent">
                 Claude Code
               </span>
             </h1>
-            <p className="mt-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
               Configure Claude Code to automatically document your AI-assisted development 
               with structured markdown plans.
             </p>
@@ -62,9 +62,9 @@ This creates a searchable history of AI-assisted development decisions.`
       </section>
 
       {/* Quick Setup */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Quick <span className="text-remix-blue">Setup</span>
           </h2>
           
@@ -72,13 +72,13 @@ This creates a searchable history of AI-assisted development decisions.`
             {/* Step 1 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-remix-blue to-cyan-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-remix-blue to-cyan-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   1
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Create the plans directory</h3>
-                <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Create the plans directory</h3>
+                <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
                   <code className="text-green-400 font-mono">mkdir plans</code>
                 </div>
               </div>
@@ -87,12 +87,12 @@ This creates a searchable history of AI-assisted development decisions.`
             {/* Step 2 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-remix-blue to-cyan-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-remix-blue to-cyan-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   2
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Add to your CLAUDE.md file</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Add to your CLAUDE.md file</h3>
                 <p className="text-gray-400 mb-3">
                   Add the following snippet to your project's CLAUDE.md file (or create one):
                 </p>
@@ -106,8 +106,8 @@ This creates a searchable history of AI-assisted development decisions.`
                       {copiedSection === 'claude-md' ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <pre className="p-4 overflow-x-auto">
-                    <code className="text-gray-300 font-mono text-sm">{claudeMdSnippet}</code>
+                  <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{claudeMdSnippet}</code>
                   </pre>
                 </div>
               </div>
@@ -116,12 +116,12 @@ This creates a searchable history of AI-assisted development decisions.`
             {/* Step 3 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-remix-blue to-cyan-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-remix-blue to-cyan-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   3
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Create the /plan command</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Create the /plan command</h3>
                 <p className="text-gray-400 mb-3">
                   Create a custom slash command for quick plan creation:
                 </p>
@@ -144,8 +144,8 @@ This creates a searchable history of AI-assisted development decisions.`
                       {copiedSection === 'plan-command' ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <pre className="p-4 overflow-x-auto">
-                    <code className="text-gray-300 font-mono text-sm">{planCommand}</code>
+                  <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{planCommand}</code>
                   </pre>
                 </div>
               </div>
@@ -155,15 +155,15 @@ This creates a searchable history of AI-assisted development decisions.`
       </section>
 
       {/* How to Use */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             How to <span className="text-cyan-400">Use</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-remix-blue">Automatic Documentation</h3>
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-remix-blue">Automatic Documentation</h3>
               <p className="text-gray-400 mb-4">
                 With the CLAUDE.md configuration, Claude Code will automatically create AI Plans when working on features:
               </p>
@@ -177,8 +177,8 @@ This creates a searchable history of AI-assisted development decisions.`
               </p>
             </div>
 
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">Using the /plan Command</h3>
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-cyan-400">Using the /plan Command</h3>
               <p className="text-gray-400 mb-4">
                 Use the slash command to explicitly create a plan:
               </p>
@@ -196,32 +196,32 @@ This creates a searchable history of AI-assisted development decisions.`
       </section>
 
       {/* Claude Code Features */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Why AI Plans Work Great with <span className="text-remix-blue">Claude Code</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-remix-blue/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-remix-blue/50 transition-all">
-              <div className="text-3xl mb-4">📋</div>
-              <h3 className="text-xl font-bold mb-2">TodoWrite Integration</h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-gradient-to-br from-remix-blue/10 to-transparent rounded-xl p-4 sm:p-6 border border-remix-gray-800 hover:border-remix-blue/50 transition-all">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📋</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">TodoWrite Integration</h3>
               <p className="text-gray-400">
                 Claude Code's TodoWrite tool naturally aligns with AI Plans' TODO tracking format
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-cyan-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-cyan-500/50 transition-all">
-              <div className="text-3xl mb-4">🔄</div>
-              <h3 className="text-xl font-bold mb-2">Incremental Commits</h3>
+            <div className="bg-gradient-to-br from-cyan-600/10 to-transparent rounded-xl p-4 sm:p-6 border border-remix-gray-800 hover:border-cyan-500/50 transition-all">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🔄</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Incremental Commits</h3>
               <p className="text-gray-400">
                 Claude Code can commit plans alongside code changes for perfect history
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-blue-500/50 transition-all">
-              <div className="text-3xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold mb-2">Context Preservation</h3>
+            <div className="bg-gradient-to-br from-blue-600/10 to-transparent rounded-xl p-4 sm:p-6 border border-remix-gray-800 hover:border-blue-500/50 transition-all">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🎯</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Context Preservation</h3>
               <p className="text-gray-400">
                 Plans help Claude Code maintain context across multiple sessions
               </p>
@@ -231,9 +231,9 @@ This creates a searchable history of AI-assisted development decisions.`
       </section>
 
       {/* Example Plan */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Example <span className="text-cyan-400">Claude Code Plan</span>
           </h2>
           
@@ -248,8 +248,8 @@ This creates a searchable history of AI-assisted development decisions.`
                 <span className="text-sm text-gray-500 font-mono">2025-01-20-api-refactor.md</span>
               </div>
             </div>
-            <pre className="p-6 overflow-x-auto">
-              <code className="text-gray-300 font-mono text-sm leading-relaxed">{`# Refactor API to Use TypeScript
+            <pre className="p-4 sm:p-6 overflow-x-auto max-w-full">
+              <code className="text-gray-300 font-mono text-xs sm:text-sm leading-relaxed whitespace-pre-wrap break-words">{`# Refactor API to Use TypeScript
 
 ## Summary
 Convert JavaScript API endpoints to TypeScript with proper typing and validation.
@@ -300,9 +300,9 @@ Convert JavaScript API endpoints to TypeScript with proper typing and validation
       </section>
 
       {/* Tips */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Pro <span className="text-remix-blue">Tips</span>
           </h2>
           
@@ -310,8 +310,8 @@ Convert JavaScript API endpoints to TypeScript with proper typing and validation
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Use with --resume</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Use with --resume</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   When resuming a session with <code className="text-remix-blue">claudecode --resume</code>, 
                   the AI Plan helps Claude Code quickly understand previous work
                 </p>
@@ -321,8 +321,8 @@ Convert JavaScript API endpoints to TypeScript with proper typing and validation
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Reference in CLAUDE.md</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Reference in CLAUDE.md</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Add "Check /plans/ for recent work context" to your CLAUDE.md to help 
                   Claude Code understand project history
                 </p>
@@ -332,8 +332,8 @@ Convert JavaScript API endpoints to TypeScript with proper typing and validation
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Commit with Code</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Commit with Code</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Ask Claude Code to commit the plan with the implementation: 
                   "Commit these changes along with the AI Plan"
                 </p>
@@ -343,8 +343,8 @@ Convert JavaScript API endpoints to TypeScript with proper typing and validation
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Team Sharing</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Team Sharing</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Share successful plans with your team to establish best practices 
                   for AI-assisted development
                 </p>

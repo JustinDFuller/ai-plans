@@ -47,22 +47,22 @@ Document your approach, track progress, and note any challenges faced during imp
 
 
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       {/* Hero Section */}
-      <section className="relative px-6 py-20 overflow-hidden">
+      <section className="relative px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-600 animate-gradient bg-[length:200%_200%]"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter leading-none">
               AI Plans for{' '}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Cursor
               </span>
             </h1>
-            <p className="mt-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
               Configure Cursor to automatically document your AI-assisted development 
               with structured markdown plans using cursor rules.
             </p>
@@ -71,9 +71,9 @@ Document your approach, track progress, and note any challenges faced during imp
       </section>
 
       {/* Quick Setup */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Quick <span className="text-purple-400">Setup</span>
           </h2>
           
@@ -81,13 +81,13 @@ Document your approach, track progress, and note any challenges faced during imp
             {/* Step 1 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   1
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Create the plans directory</h3>
-                <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Create the plans directory</h3>
+                <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
                   <code className="text-green-400 font-mono">mkdir plans</code>
                 </div>
               </div>
@@ -96,16 +96,16 @@ Document your approach, track progress, and note any challenges faced during imp
             {/* Step 2 - Modern Project Rules */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   2
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Create Project Rules (Recommended)</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Create Project Rules (Recommended)</h3>
                 <p className="text-gray-400 mb-3">
                   Create the modern <code className="text-purple-400">.cursor/rules</code> directory and add an MDC rule file:
                 </p>
-                <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800 mb-3">
+                <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800 mb-3">
                   <code className="text-green-400 font-mono">
                     mkdir -p .cursor/rules<br />
                     touch .cursor/rules/ai-plans.mdc
@@ -121,8 +121,8 @@ Document your approach, track progress, and note any challenges faced during imp
                       {copiedSection === 'cursor-mdc' ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <pre className="p-4 overflow-x-auto">
-                    <code className="text-gray-300 font-mono text-sm">{cursorMdcRule}</code>
+                  <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{cursorMdcRule}</code>
                   </pre>
                 </div>
                 <div className="mt-4 p-4 bg-yellow-900/20 border border-yellow-800/50 rounded-lg">
@@ -137,29 +137,29 @@ Document your approach, track progress, and note any challenges faced during imp
             {/* Step 3 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl">
                   3
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3">Configure rule activation</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Configure rule activation</h3>
                 <p className="text-gray-400 mb-3">
                   Choose how your AI Plans rule should be activated:
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800">
+                  <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
                     <p className="text-purple-400 font-semibold mb-2">Auto Attached</p>
                     <p className="text-gray-300 text-sm">
                       Set <code className="text-cyan-400">globs</code> to match your code files (e.g., "**/*.ts")
                     </p>
                   </div>
-                  <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800">
+                  <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
                     <p className="text-purple-400 font-semibold mb-2">Agent Requested</p>
                     <p className="text-gray-300 text-sm">
                       Provide a clear <code className="text-cyan-400">description</code> for manual invocation
                     </p>
                   </div>
-                  <div className="bg-remix-gray-900 rounded-lg p-4 border border-remix-gray-800">
+                  <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
                     <p className="text-purple-400 font-semibold mb-2">Always Applied</p>
                     <p className="text-gray-300 text-sm">
                       Set <code className="text-cyan-400">alwaysApply: true</code> for constant activation
@@ -173,15 +173,15 @@ Document your approach, track progress, and note any challenges faced during imp
       </section>
 
       {/* How to Use */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             How to <span className="text-pink-400">Use</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">With Composer</h3>
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-purple-400">With Composer</h3>
               <p className="text-gray-400 mb-4">
                 When using Cursor's Composer for multi-file edits:
               </p>
@@ -195,8 +195,8 @@ Document your approach, track progress, and note any challenges faced during imp
               </p>
             </div>
 
-            <div className="bg-remix-gray-900/50 rounded-xl p-6 border border-remix-gray-800">
-              <h3 className="text-2xl font-bold mb-4 text-pink-400">With Chat</h3>
+            <div className="bg-remix-gray-900/50 rounded-xl p-4 sm:p-6 border border-remix-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-pink-400">With Chat</h3>
               <p className="text-gray-400 mb-4">
                 Ask Cursor to create a plan before implementation:
               </p>
@@ -214,33 +214,33 @@ Document your approach, track progress, and note any challenges faced during imp
       </section>
 
       {/* Cursor Features */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Why AI Plans Work Great with <span className="text-purple-400">Cursor</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-purple-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-purple-500/50 transition-all">
-              <div className="text-3xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-2">Composer Integration</h3>
-              <p className="text-gray-400">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-gradient-to-br from-purple-600/10 to-transparent rounded-xl p-4 sm:p-6 border border-remix-gray-800 hover:border-purple-500/50 transition-all">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🎨</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Composer Integration</h3>
+              <p className="text-sm sm:text-base text-gray-400">
                 Multi-file edits in Composer benefit from structured planning documentation
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-pink-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-pink-500/50 transition-all">
               <div className="text-3xl mb-4">📚</div>
-              <h3 className="text-xl font-bold mb-2">Context Management</h3>
-              <p className="text-gray-400">
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Context Management</h3>
+              <p className="text-sm sm:text-base text-gray-400">
                 AI Plans help maintain context across different chat sessions and composers
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-purple-600/10 to-transparent rounded-xl p-6 border border-remix-gray-800 hover:border-purple-500/50 transition-all">
               <div className="text-3xl mb-4">🔍</div>
-              <h3 className="text-xl font-bold mb-2">Codebase Understanding</h3>
-              <p className="text-gray-400">
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Codebase Understanding</h3>
+              <p className="text-sm sm:text-base text-gray-400">
                 Plans provide searchable documentation of AI-driven architectural decisions
               </p>
             </div>
@@ -249,9 +249,9 @@ Document your approach, track progress, and note any challenges faced during imp
       </section>
 
       {/* Example Plan */}
-      <section className="px-6 py-16 bg-remix-gray-900/30">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-remix-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Example <span className="text-pink-400">Cursor Plan</span>
           </h2>
           
@@ -266,8 +266,8 @@ Document your approach, track progress, and note any challenges faced during imp
                 <span className="text-sm text-gray-500 font-mono">2025-01-20-15-45-dark-mode.md</span>
               </div>
             </div>
-            <pre className="p-6 overflow-x-auto">
-              <code className="text-gray-300 font-mono text-sm leading-relaxed">{`# Implement Dark Mode Support
+            <pre className="p-4 sm:p-6 overflow-x-auto max-w-full">
+              <code className="text-gray-300 font-mono text-xs sm:text-sm leading-relaxed whitespace-pre-wrap break-words">{`# Implement Dark Mode Support
 
 ## Summary
 Add comprehensive dark mode support with system preference detection and manual toggle.
@@ -320,9 +320,9 @@ Using Composer for multi-file changes:
       </section>
 
       {/* Tips */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-12">
             Pro <span className="text-purple-400">Tips</span>
           </h2>
           
@@ -330,8 +330,8 @@ Using Composer for multi-file changes:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Reference Plans in Composer</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Reference Plans in Composer</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   When starting Composer, mention "Check /plans/ for recent work" to help 
                   Cursor understand previous implementations and maintain consistency
                 </p>
@@ -341,8 +341,8 @@ Using Composer for multi-file changes:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Include Plan Template in Rules</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Include Plan Template in Rules</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Add <code className="text-purple-400">@/plans/template.md</code> reference in your 
                   .mdc rules to ensure consistent AI Plan format across all sessions
                 </p>
@@ -352,8 +352,8 @@ Using Composer for multi-file changes:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Auto-Apply to Code Files</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Auto-Apply to Code Files</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Set globs in your AI Plans rule to <code className="text-purple-400">["**/*.ts", "**/*.tsx"]</code> 
                   so Cursor automatically creates plans when working on features
                 </p>
@@ -363,8 +363,8 @@ Using Composer for multi-file changes:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-lg mb-2">Link Plans in Comments</h3>
-                <p className="text-gray-400">
+                <h3 className="font-bold text-base sm:text-lg mb-2">Link Plans in Comments</h3>
+                <p className="text-sm sm:text-base text-gray-400">
                   Ask Cursor to add comments like <code className="text-purple-400">// See: /plans/2025-01-20-feature.md</code> 
                   in complex code sections for future context
                 </p>
