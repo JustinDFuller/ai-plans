@@ -41,9 +41,9 @@ The plan should capture:
 This creates a searchable history of AI-assisted development decisions.`;
 
   return (
-    <div className="pt-20 sm:pt-24 min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
+      <section className="relative px-4 sm:px-6 pt-32 sm:pt-40 py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-remix-blue via-cyan-600 to-blue-600 animate-gradient bg-[length:200%_200%]"></div>
         </div>

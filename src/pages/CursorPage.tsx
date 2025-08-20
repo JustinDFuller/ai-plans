@@ -48,9 +48,9 @@ Document your approach, track progress, and note any challenges faced during imp
 @/plans/README.md`;
 
   return (
-    <div className="pt-20 sm:pt-24 min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
+      <section className="relative px-4 sm:px-6 pt-32 sm:pt-40 py-16 sm:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-600 animate-gradient bg-[length:200%_200%]"></div>
         </div>
