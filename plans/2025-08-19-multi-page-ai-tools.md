@@ -1,14 +1,17 @@
 # Add Multi-Page Support with AI Tool Integration Pages
 
 ## Summary
+
 Transform the single-page AI Plans website into a multi-page application with dedicated pages for Claude Code, Cursor, and GitHub Copilot, providing tool-specific setup instructions and configuration snippets.
 
 ## Original Request
+
 "Now that we have the basic website explaining the plans concept, let's help people use them! I think we should provide separate pages for each of the major AI coding tools. For Claude Code, we should include a snippet to include in CLAUDE.md as well as a command that they can place in `/.claude/commands`. We should also include a separate page for cursor that covers cursor rules. We should also include a separate page for github copilot."
 
 ## AI's Plan
 
 ### Architecture Decision
+
 - Use React Router for client-side routing (SPA approach)
 - Keep existing homepage as main landing page
 - Add dedicated pages for each AI tool at `/claude-code`, `/cursor`, `/github-copilot`
@@ -16,6 +19,7 @@ Transform the single-page AI Plans website into a multi-page application with de
 - Maintain existing dark theme and Remix-inspired design
 
 ### Implementation Strategy
+
 1. Install React Router dependencies
 2. Restructure components into pages directory
 3. Create tool-specific pages with actionable content
@@ -23,6 +27,7 @@ Transform the single-page AI Plans website into a multi-page application with de
 5. Include custom commands and rules for each tool
 
 ## AI's TODOs
+
 1. ✅ Create AI Plan document for multi-page implementation
 2. ✅ Install React Router dependencies
 3. ✅ Create router structure in main.tsx
@@ -35,8 +40,10 @@ Transform the single-page AI Plans website into a multi-page application with de
 10. ✅ Test all pages and navigation
 
 ## Major Issues Encountered
+
 - None yet
 
 ---
-*Generated: 2025-08-19 20:45*
-*Tool: Claude Code (claude.ai/code)*
+
+_Generated: 2025-08-19 20:45_
+_Tool: Claude Code (claude.ai/code)_

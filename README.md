@@ -73,6 +73,7 @@ ai-plans/
 ## 🎨 Design
 
 The website features a Remix.run-inspired dark theme with:
+
 - Vibrant cyan, blue, and purple gradients
 - Bold typography and modern layout
 - Smooth animations and transitions
@@ -87,6 +88,7 @@ When using AI tools for development, create a plan document:
 ```
 
 Include these sections:
+
 1. **Summary** - Concise description of the change
 2. **Original Request** - The user's initial request
 3. **AI's Plan** - Implementation strategy

@@ -1,0 +1,15 @@
+dist
+build
+node_modules
+*.min.js
+*.min.css
+coverage
+.git
+.next
+public
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico

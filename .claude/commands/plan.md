@@ -10,6 +10,7 @@ Create an AI Plan document in /plans/ with the following structure:
 4. Document any issues encountered and their solutions
 
 The plan should capture:
+
 - The original developer request
 - Your implementation approach
 - Step-by-step TODOs with status

@@ -1,9 +1,9 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import HomePage from './pages/HomePage'
-import ClaudeCodePage from './pages/ClaudeCodePage'
-import CursorPage from './pages/CursorPage'
-import GitHubCopilotPage from './pages/GitHubCopilotPage'
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import ClaudeCodePage from './pages/ClaudeCodePage';
+import CursorPage from './pages/CursorPage';
+import GitHubCopilotPage from './pages/GitHubCopilotPage';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="github-copilot" element={<GitHubCopilotPage />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
