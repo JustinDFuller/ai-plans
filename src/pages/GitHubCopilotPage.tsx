@@ -47,8 +47,7 @@ This creates valuable documentation for the team.`
 
   const vscodeSettings = `{
   // Enable custom instructions for code generation
-  "github.copilot.chat.codeGeneration
-    .useInstructionFiles": true,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   
   // Enable Copilot for all file types
   "github.copilot.enable": {
@@ -153,7 +152,7 @@ This creates valuable documentation for the team.`
                       {copiedSection === 'copilot-instructions' ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+                  <pre className="p-3 sm:p-4 overflow-x-auto">
                     <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{copilotInstructions}</code>
                   </pre>
                 </div>
@@ -183,7 +182,7 @@ This creates valuable documentation for the team.`
                     </button>
                   </div>
                   <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
-                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{vscodeSettings}</code>
+                    <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-all">{vscodeSettings}</code>
                   </pre>
                 </div>
               </div>
@@ -252,7 +251,7 @@ This creates valuable documentation for the team.`
                 {copiedSection === 'chat-prompts' ? 'Copied!' : 'Copy'}
               </button>
             </div>
-            <pre className="p-3 sm:p-4 overflow-x-auto max-w-full">
+            <pre className="p-3 sm:p-4 overflow-x-auto">
               <code className="text-gray-300 font-mono text-xs sm:text-sm whitespace-pre-wrap break-words">{chatPrompts}</code>
             </pre>
           </div>
@@ -398,7 +397,7 @@ This creates valuable documentation for the team.`
                 <span className="text-sm text-gray-500 font-mono">2025-01-20-09-15-notification-system.md</span>
               </div>
             </div>
-            <pre className="p-4 sm:p-6 overflow-x-auto max-w-full">
+            <pre className="p-4 sm:p-6 overflow-x-auto">
               <code className="text-gray-300 font-mono text-xs sm:text-sm leading-relaxed whitespace-pre-wrap break-words">{`# Implement Notification System
 
 ## Summary
