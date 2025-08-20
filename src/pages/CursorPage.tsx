@@ -12,8 +12,7 @@ function CursorPage() {
   // Modern Cursor Project Rules (MDC format)
   const cursorMdcRule = `---
 description: Create AI Plans for feature implementations
-globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
-alwaysApply: false
+alwaysApply: true
 ---
 
 # AI Plans Documentation
@@ -142,29 +141,16 @@ Document your approach, track progress, and note any challenges faced during imp
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Configure rule activation</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Rule activates automatically</h3>
                 <p className="text-gray-400 mb-3">
-                  Choose how your AI Plans rule should be activated:
+                  With <code className="text-cyan-400">alwaysApply: true</code>, the AI Plans rule is always active. 
+                  This ensures every feature implementation gets properly documented, regardless of which files you're working on.
                 </p>
-                <div className="space-y-3">
-                  <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
-                    <p className="text-purple-400 font-semibold mb-2">Auto Attached</p>
-                    <p className="text-gray-300 text-sm">
-                      Set <code className="text-cyan-400">globs</code> to match your code files (e.g., "**/*.ts")
-                    </p>
-                  </div>
-                  <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
-                    <p className="text-purple-400 font-semibold mb-2">Agent Requested</p>
-                    <p className="text-gray-300 text-sm">
-                      Provide a clear <code className="text-cyan-400">description</code> for manual invocation
-                    </p>
-                  </div>
-                  <div className="bg-remix-gray-900 rounded-lg p-3 sm:p-4 border border-remix-gray-800">
-                    <p className="text-purple-400 font-semibold mb-2">Always Applied</p>
-                    <p className="text-gray-300 text-sm">
-                      Set <code className="text-cyan-400">alwaysApply: true</code> for constant activation
-                    </p>
-                  </div>
+                <div className="bg-green-900/20 border border-green-800/50 rounded-lg p-4">
+                  <p className="text-green-400 text-sm">
+                    <strong>Why always apply?</strong> AI Plans documentation should be created for any feature work, 
+                    not just when editing specific file types. This global approach ensures comprehensive project documentation.
+                  </p>
                 </div>
               </div>
             </div>
@@ -352,10 +338,10 @@ Using Composer for multi-file changes:
             <div className="flex gap-4">
               <span className="text-2xl">💡</span>
               <div>
-                <h3 className="font-bold text-base sm:text-lg mb-2">Auto-Apply to Code Files</h3>
+                <h3 className="font-bold text-base sm:text-lg mb-2">Always Apply for Consistency</h3>
                 <p className="text-sm sm:text-base text-gray-400">
-                  Set globs in your AI Plans rule to <code className="text-purple-400">["**/*.ts", "**/*.tsx"]</code> 
-                  so Cursor automatically creates plans when working on features
+                  Using <code className="text-purple-400">alwaysApply: true</code> ensures AI Plans are created 
+                  for every feature, regardless of file types being edited
                 </p>
               </div>
             </div>
