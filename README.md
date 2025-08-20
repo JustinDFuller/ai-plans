@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository was created 100% using [Claude Code](https://claude.ai/code) - every line of code, documentation, and design decision was implemented through AI-assisted development.
+
 # AI Plans
 
 A modern documentation website explaining the AI Plans concept - a structured approach to tracking AI-assisted development decisions and processes.

@@ -275,6 +275,19 @@ const Layout: FC = () => {
       {/* Footer */}
       <footer className="border-t border-remix-gray-800 px-4 sm:px-6 py-12 sm:py-16 bg-remix-darker">
         <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-6 px-4 py-3 bg-remix-gray-900/50 rounded-lg border border-remix-gray-800 max-w-2xl mx-auto">
+            <p className="text-remix-blue text-sm font-medium">
+              ℹ️ This repository was created 100% using{' '}
+              <a
+                href="https://claude.ai/code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-remix-yellow transition-colors"
+              >
+                Claude Code
+              </a>
+            </p>
+          </div>
           <p className="text-gray-400 text-lg font-medium">
             AI Plans - A pattern for documenting AI-assisted development
           </p>
