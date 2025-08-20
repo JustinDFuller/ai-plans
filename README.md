@@ -83,7 +83,7 @@ The website features a Remix.run-inspired dark theme with:
 When using AI tools for development, create a plan document:
 
 ```markdown
-/plans/YYYY-MM-DD-HH-mm-description.md
+/plans/YYYY-MM-DD-description.md
 ```
 
 Include these sections:

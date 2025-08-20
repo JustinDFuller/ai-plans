@@ -22,7 +22,7 @@ When working on features or fixes in this project, create an AI Plan document in
 
 ## File Format
 - Location: /plans/
-- Naming: YYYY-MM-DD-HH-mm-description.md
+- Naming: YYYY-MM-DD-description.md
 - Include sections: Summary, Original Request, AI's Plan, AI's TODOs, Major Issues Encountered
 
 ## TODO Tracking

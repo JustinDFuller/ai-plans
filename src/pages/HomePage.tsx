@@ -209,10 +209,10 @@ function HomePage() {
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-gray-200">Naming Convention</h3>
               <div className="bg-remix-gray-900/80 rounded-xl p-4 sm:p-6 md:p-8 border border-remix-gray-800 group-hover:border-remix-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-remix-blue/10">
                 <code className="text-green-400 text-sm sm:text-base md:text-lg lg:text-xl font-mono break-all">
-                  /plans/YYYY-MM-DD-HH-mm-description.md
+                  /plans/YYYY-MM-DD-description.md
                 </code>
                 <p className="mt-6 text-gray-400">
-                  Hour and minute are optional but useful for multiple plans per day
+                  Simple date-based naming for easy chronological ordering
                 </p>
               </div>
             </div>
@@ -254,7 +254,7 @@ function HomePage() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-                <span className="text-sm text-gray-500 font-mono">2025-01-19-14-30-auth-system.md</span>
+                <span className="text-sm text-gray-500 font-mono">2025-01-19-auth-system.md</span>
               </div>
             </div>
             <pre className="p-4 sm:p-6 md:p-8 overflow-x-auto">
@@ -304,7 +304,7 @@ and protect the dashboard routes."
 **Solution**: Added retry limit and proper error boundaries
 
 ---
-*Generated: 2025-01-19 14:30*  
+*Generated: 2025-01-19*  
 *Tool: Claude Code (claude.ai/code)*`}</code>
             </pre>
           </div>

@@ -61,7 +61,7 @@ npm run lint         # Run ESLint
 
 When making changes to this project, create an AI Plan in `/plans/` following the naming convention:
 ```
-/plans/YYYY-MM-DD-HH-mm-description.md
+/plans/YYYY-MM-DD-description.md
 ```
 
 Include: Summary, Original Request, AI's Plan, AI's TODOs, and Major Issues Encountered.

@@ -21,7 +21,7 @@ This project uses AI Plans to document AI-assisted development decisions.
 
 ## File Format
 Create markdown files in /plans/ with this structure:
-- Filename: YYYY-MM-DD-HH-mm-description.md
+- Filename: YYYY-MM-DD-description.md
 - Sections: Summary, Original Request, AI's Plan, AI's TODOs, Major Issues
 
 ## TODO Tracking

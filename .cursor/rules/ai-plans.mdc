@@ -10,7 +10,7 @@ When working on features or fixes in this project, create an AI Plan document in
 
 ## File Format
 - Location: /plans/
-- Naming: YYYY-MM-DD-HH-mm-description.md
+- Naming: YYYY-MM-DD-description.md
 - Include sections: Summary, Original Request, AI's Plan, AI's TODOs, Major Issues Encountered
 
 ## TODO Tracking
@@ -27,7 +27,7 @@ AI Plans create a searchable history of:
 
 ## Example
 When asked to "Add user authentication", create:
-/plans/2025-01-20-14-30-add-user-auth.md
+/plans/2025-01-20-add-user-auth.md
 
 Document your approach, track progress, and note any challenges faced during implementation.
 
