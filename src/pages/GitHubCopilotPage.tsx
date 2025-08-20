@@ -1,12 +1,15 @@
+import type { FC } from 'react';
 import { useState } from 'react';
 
-function GitHubCopilotPage() {
+const GitHubCopilotPage: FC = () => {
   const [copiedSection, setCopiedSection] = useState<string | null>(null);
 
-  const copyToClipboard = (text: string, section: string) => {
-    navigator.clipboard.writeText(text);
+  const copyToClipboard = (text: string, section: string): void => {
+    void navigator.clipboard.writeText(text);
     setCopiedSection(section);
-    setTimeout(() => setCopiedSection(null), 2000);
+    setTimeout(() => {
+      setCopiedSection(null);
+    }, 2000);
   };
 
   const copilotInstructions = `# AI Plans Documentation
@@ -154,7 +157,9 @@ This creates valuable documentation for the team.`;
                       .github/copilot-instructions.md
                     </span>
                     <button
-                      onClick={() => copyToClipboard(copilotInstructions, 'copilot-instructions')}
+                      onClick={() => {
+                        copyToClipboard(copilotInstructions, 'copilot-instructions');
+                      }}
                       className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
                     >
                       {copiedSection === 'copilot-instructions' ? 'Copied!' : 'Copy'}
@@ -188,7 +193,9 @@ This creates valuable documentation for the team.`;
                   <div className="flex items-center justify-between px-4 py-3 border-b border-remix-gray-800">
                     <span className="text-sm text-gray-500 font-mono">settings.json</span>
                     <button
-                      onClick={() => copyToClipboard(vscodeSettings, 'vscode-settings')}
+                      onClick={() => {
+                        copyToClipboard(vscodeSettings, 'vscode-settings');
+                      }}
                       className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
                     >
                       {copiedSection === 'vscode-settings' ? 'Copied!' : 'Copy'}
@@ -266,7 +273,9 @@ This creates valuable documentation for the team.`;
             <div className="flex items-center justify-between px-4 py-3 border-b border-remix-gray-800">
               <span className="text-sm text-gray-500 font-mono">Useful Prompts</span>
               <button
-                onClick={() => copyToClipboard(chatPrompts, 'chat-prompts')}
+                onClick={() => {
+                  copyToClipboard(chatPrompts, 'chat-prompts');
+                }}
                 className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
               >
                 {copiedSection === 'chat-prompts' ? 'Copied!' : 'Copy'}
@@ -550,6 +559,6 @@ Suggested by Copilot Chat based on workspace analysis:
       </section>
     </div>
   );
-}
+};
 
 export default GitHubCopilotPage;

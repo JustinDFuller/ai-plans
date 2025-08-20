@@ -1,4 +1,6 @@
-function HomePage() {
+import type { FC } from 'react';
+
+const HomePage: FC = () => {
   return (
     <>
       {/* Hero Section with Animated Gradient */}
@@ -452,12 +454,12 @@ and protect the dashboard routes."
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">
                     {item.title}
                   </h3>
-                  {item.description && (
+                  {item.description !== null && (
                     <p className="text-gray-400 mb-3 sm:mb-4 text-base sm:text-lg">
                       {item.description}
                     </p>
                   )}
-                  {item.content && (
+                  {item.content !== null && (
                     <div className="bg-remix-gray-900/80 rounded-xl p-4 sm:p-6 border border-remix-gray-800 hover:border-remix-blue/50 transition-all duration-300">
                       {item.content}
                     </div>
@@ -470,6 +472,6 @@ and protect the dashboard routes."
       </section>
     </>
   );
-}
+};
 
 export default HomePage;

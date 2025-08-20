@@ -1,12 +1,15 @@
+import type { FC } from 'react';
 import { useState } from 'react';
 
-function ClaudeCodePage() {
+const ClaudeCodePage: FC = () => {
   const [copiedSection, setCopiedSection] = useState<string | null>(null);
 
-  const copyToClipboard = (text: string, section: string) => {
-    navigator.clipboard.writeText(text);
+  const copyToClipboard = (text: string, section: string): void => {
+    void navigator.clipboard.writeText(text);
     setCopiedSection(section);
-    setTimeout(() => setCopiedSection(null), 2000);
+    setTimeout(() => {
+      setCopiedSection(null);
+    }, 2000);
   };
 
   const claudeMdSnippet = `## AI Plans Convention
@@ -104,7 +107,9 @@ This creates a searchable history of AI-assisted development decisions.`;
                   <div className="flex items-center justify-between px-4 py-3 border-b border-remix-gray-800">
                     <span className="text-sm text-gray-500 font-mono">CLAUDE.md</span>
                     <button
-                      onClick={() => copyToClipboard(claudeMdSnippet, 'claude-md')}
+                      onClick={() => {
+                        copyToClipboard(claudeMdSnippet, 'claude-md');
+                      }}
                       className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
                     >
                       {copiedSection === 'claude-md' ? 'Copied!' : 'Copy'}
@@ -148,7 +153,9 @@ This creates a searchable history of AI-assisted development decisions.`;
                   <div className="flex items-center justify-between px-4 py-3 border-b border-remix-gray-800">
                     <span className="text-sm text-gray-500 font-mono">plan.md</span>
                     <button
-                      onClick={() => copyToClipboard(planCommand, 'plan-command')}
+                      onClick={() => {
+                        copyToClipboard(planCommand, 'plan-command');
+                      }}
                       className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
                     >
                       {copiedSection === 'plan-command' ? 'Copied!' : 'Copy'}
@@ -371,6 +378,6 @@ Convert JavaScript API endpoints to TypeScript with proper typing and validation
       </section>
     </div>
   );
-}
+};
 
 export default ClaudeCodePage;

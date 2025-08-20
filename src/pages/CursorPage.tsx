@@ -1,12 +1,15 @@
+import type { FC } from 'react';
 import { useState } from 'react';
 
-function CursorPage() {
+const CursorPage: FC = () => {
   const [copiedSection, setCopiedSection] = useState<string | null>(null);
 
-  const copyToClipboard = (text: string, section: string) => {
-    navigator.clipboard.writeText(text);
+  const copyToClipboard = (text: string, section: string): void => {
+    void navigator.clipboard.writeText(text);
     setCopiedSection(section);
-    setTimeout(() => setCopiedSection(null), 2000);
+    setTimeout(() => {
+      setCopiedSection(null);
+    }, 2000);
   };
 
   // Modern Cursor Project Rules (MDC format)
@@ -121,7 +124,9 @@ Document your approach, track progress, and note any challenges faced during imp
                       .cursor/rules/ai-plans.mdc
                     </span>
                     <button
-                      onClick={() => copyToClipboard(cursorMdcRule, 'cursor-mdc')}
+                      onClick={() => {
+                        copyToClipboard(cursorMdcRule, 'cursor-mdc');
+                      }}
                       className="text-xs px-3 py-1 bg-remix-gray-800 hover:bg-remix-gray-700 rounded transition-colors"
                     >
                       {copiedSection === 'cursor-mdc' ? 'Copied!' : 'Copy'}
@@ -386,6 +391,6 @@ Using Composer for multi-file changes:
       </section>
     </div>
   );
-}
+};
 
 export default CursorPage;

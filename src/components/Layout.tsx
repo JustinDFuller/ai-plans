@@ -1,7 +1,8 @@
+import type { FC } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-function Layout() {
+const Layout: FC = () => {
   const location = useLocation();
   const [toolsMenuOpen, setToolsMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,7 +42,9 @@ function Layout() {
 
             {/* Mobile menu button */}
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              onClick={() => {
+                setMobileMenuOpen(!mobileMenuOpen);
+              }}
               className="md:hidden p-2 rounded-lg hover:bg-remix-gray-800 transition-colors"
               aria-label="Toggle menu"
             >
@@ -107,8 +110,14 @@ function Layout() {
               {/* Tools Dropdown */}
               <div className="relative">
                 <button
-                  onClick={() => setToolsMenuOpen(!toolsMenuOpen)}
-                  onBlur={() => setTimeout(() => setToolsMenuOpen(false), 200)}
+                  onClick={() => {
+                    setToolsMenuOpen(!toolsMenuOpen);
+                  }}
+                  onBlur={() => {
+                    setTimeout(() => {
+                      setToolsMenuOpen(false);
+                    }, 200);
+                  }}
                   className="flex items-center gap-2 text-gray-300 hover:text-remix-blue transition-all duration-200 hover:scale-105"
                 >
                   Tools
@@ -132,21 +141,27 @@ function Layout() {
                     <Link
                       to="/claude-code"
                       className="block px-4 py-3 text-gray-300 hover:bg-remix-gray-800 hover:text-remix-blue transition-colors"
-                      onClick={() => setToolsMenuOpen(false)}
+                      onClick={() => {
+                        setToolsMenuOpen(false);
+                      }}
                     >
                       Claude Code
                     </Link>
                     <Link
                       to="/cursor"
                       className="block px-4 py-3 text-gray-300 hover:bg-remix-gray-800 hover:text-purple-400 transition-colors"
-                      onClick={() => setToolsMenuOpen(false)}
+                      onClick={() => {
+                        setToolsMenuOpen(false);
+                      }}
                     >
                       Cursor
                     </Link>
                     <Link
                       to="/github-copilot"
                       className="block px-4 py-3 text-gray-300 hover:bg-remix-gray-800 hover:text-green-400 transition-colors"
-                      onClick={() => setToolsMenuOpen(false)}
+                      onClick={() => {
+                        setToolsMenuOpen(false);
+                      }}
                     >
                       GitHub Copilot
                     </Link>
@@ -168,28 +183,36 @@ function Layout() {
                 <>
                   <a
                     href="#what"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-remix-blue bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     What
                   </a>
                   <a
                     href="#format"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-remix-blue bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     Format
                   </a>
                   <a
                     href="#example"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-remix-blue bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     Example
                   </a>
                   <a
                     href="#getting-started"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-remix-blue bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     Get Started
@@ -198,7 +221,9 @@ function Layout() {
               ) : (
                 <Link
                   to="/"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                  }}
                   className="block py-4 px-4 text-lg text-gray-200 hover:text-remix-blue bg-remix-gray-800 hover:bg-remix-gray-700 rounded-lg transition-all border border-remix-gray-700"
                 >
                   Home
@@ -212,21 +237,27 @@ function Layout() {
                 <div className="space-y-2">
                   <Link
                     to="/claude-code"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-remix-blue bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     Claude Code
                   </Link>
                   <Link
                     to="/cursor"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-purple-400 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     Cursor
                   </Link>
                   <Link
                     to="/github-copilot"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
                     className="block py-4 px-4 text-lg text-white hover:text-green-400 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600"
                   >
                     GitHub Copilot
@@ -279,6 +310,6 @@ function Layout() {
       </footer>
     </div>
   );
-}
+};
 
 export default Layout;
