@@ -8,9 +8,10 @@ function Layout() {
   
   const isHomePage = location.pathname === '/'
   
-  // Close mobile menu on route change
+  // Close mobile menu and scroll to top on route change
   useEffect(() => {
     setMobileMenuOpen(false)
+    window.scrollTo(0, 0)
   }, [location])
   
   // Prevent body scroll when mobile menu is open
