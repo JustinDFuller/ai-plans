@@ -3,6 +3,8 @@
 
 # AI Plans
 
+[![CI](https://github.com/JustinDFuller/ai-plans.dev/actions/workflows/ci.yml/badge.svg)](https://github.com/JustinDFuller/ai-plans.dev/actions/workflows/ci.yml)
+
 A modern documentation website explaining the AI Plans concept - a structured approach to tracking AI-assisted development decisions and processes.
 
 ## 🚀 Live Demo
