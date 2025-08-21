@@ -7,7 +7,7 @@ A modern documentation website explaining the AI Plans concept - a structured ap
 
 ## 🚀 Live Demo
 
-Visit [ai-plans.vercel.app](https://ai-plans.vercel.app) (deploy via Vercel)
+Visit [ai-plans.dev](https://ai-plans.dev) (deploy via Vercel)
 
 ## Example
 
@@ -112,7 +112,7 @@ MIT License - feel free to use this pattern in your projects!
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/JustinDFuller/ai-plans)
-- [AI Plans Concept](https://ai-plans.vercel.app)
+- [AI Plans Concept](https://ai-plans.dev)
 
 ---
 
